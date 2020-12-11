@@ -6,9 +6,9 @@ GitHubiin rekisteröityminen (Sign up): (https://github.com/join)
 Gitin asennus linuxiin: (https://git-scm.com/download/linux)
 Asennuksen jälkeen on hyvä konfiguroida gitiin omat henkilötiedot eli nimi ja sähköpostiosoite:
 
-` $ git config --global user.name "Oma Nimi" `
+` git config --global user.name "Oma Nimi" `
 
-` $ git config --global user.email oma@nimi.com `
+` git config --global user.email oma@nimi.com `
 
 Lisätietoa ja ohjeita muihin konfiguraatioihin löytyy täältä (https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 
@@ -22,7 +22,7 @@ Kohtaan Repository name kirjoitetaan luotavan repon nimi. Valitaan julkisuus (Pu
 3. GitHub: Repon URLin kopiointi
 Osoite, jolla repoon viitataan löytyy repon sivulta. Osoitetta tarvitaan esimerkiksi repon kloonaamiseen omalle koneelle. Kopiointi onnistuu kuvan osoittamasta paikasta.
 ![Capture](/Excercise%201/Screencapture/osoitteen_kopiointi.png?raw=true)
-4. Tietokone: Luodaan projektille ns. työhakemisto (working directory) ja siirrytään sinne. Tämä ei ole välttämätöntä, mutta voi olla että jotkin kehitystyökalut vaativat tätä. 
+4.< Tietokone: Luodaan projektille ns. työhakemisto (working directory) ja siirrytään sinne. Tämä ei ole välttämätöntä, mutta voi olla että jotkin kehitystyökalut vaativat tätä. 
 
 ` mkdir <projektin_nimi> `
 
@@ -30,7 +30,7 @@ Osoite, jolla repoon viitataan löytyy repon sivulta. Osoitetta tarvitaan esimer
 
 5. Tietokone: Klooanataan GitHub repo omalle koneelle:
 
-` git clone <kohdassa_3_kopioitu_repositoryn_osoite>
+` git clone <kohdassa_3_kopioitu_repositoryn_osoite> `
 
 Kloonaus luo uuden hakemiston, jolla on sama nimi kuin GitHubin repolla. Tässä harjoituksessa luotu tiedosto on siis DevOps-Exc1. Siirrytään hakemistoon `cd`-komennolla.
 
@@ -56,18 +56,21 @@ __Bold__
 (www.google.fi) URL-osoite
 ```
 3. Tietokone: lisätään muutokset `git add README.md`
-4. Tietokone: tehdään commit `git commit -m "<commit viesti>"`
-5. Visual Studio Code: Push changes to Github
-6. GitHub: Check changes
+4. Tietokone: tehdään commit `git commit -m "<commit-viesti>"`
+(Kohdat 3. ja 4. voidaan yhdistää komentoon: `git commit -a -m "<commit-viesti>")
+5. Tietokone: työnnetään muutokset GitHubiin `git push`, jos kone pyytää käyttäjätunnusta ja salasanaa, niihin syötetään GitHubin käyttäjätunnus ja salasana.
+6. GitHub: Tehdyt muutokset pitäisi nyt näkyä myös GitHubin README.md -tiedostossa.
 
-### Create new branch
-1. GitHub: Create new branch: Development
-2. Visual Studio Code: Pull changes
-3. Visual Studio Code: Change branch
-4. Visual Studio Code: Change README.md file
-5. Visual Studio Code: Add changes, Commit changes
-6. Visual Studio Code: Push changes
-7. GitHub: Confirm changes
+### Uuden haaran luominen
+1. GitHub: Luodaan uusi haara: Development
+Klikataan kuvan mukaista nappia ja kirjoitetaan tekstikenttään uuden haaran nimi (esim. Development) ja painetaan enteriä. Kannattaa painaa mieleen uuden haaran tarkka kirjoitusasu, sillä on merkitystä myöhemmässä vaiheessa.
+![Capture](/Excercise%201/Screencapture/uuden_haaran_luonti.png?raw=true)
+2. Tietokone: haetaan GitHubiin tehdyt muutokset paikalliseen repoon komennolla`git pull` (huomataan, että git kertoo uuden haaran olemassaolosta).
+3. Tietokone: Vaihdetaan uuteen haaraan komennolla `git checkout <haaran_nimi>`, haaran nimi on tässä vaiheessa oltava sama kuin kohdassa 1. Ellei se ole, tulee kohdassa 6. virheilmoituksia ongelmista, kun paikallisessa versiossa on haara, jota ei löydy GitHubista.  
+4. Tietokonen: Tehdään jotain muutoksia README.md -tiedostoon.
+5. Tietokone: Lisätään ja commitoidaan muutokset `git add .` ja `git commit -m "commit_viesti". Käyttämällä `git add .` ei tarvitse erikseen kirjoittaa kaikkien lisättävien tiedostojen nimiä, mikä säästää aikaa, jos lisättävänä on useita tiedostoja. Komento `git add -A` tekee saman asian. 
+6. Tietokone: Työnnetään muutokset Githubiin `git push`
+7. GitHub: Ellei tekemäsi muutos näy GitHubissa sivun uudelleen lataamisen jälkeen klikkaa samaa nappulaa kuin 1. kohdassa ja valitse sieltä haara (branch), johon teit muutoksia. 
 
 ### Merge Branches
 1. GitHub: Chose Pull request tab
