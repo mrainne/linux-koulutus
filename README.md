@@ -5,8 +5,8 @@ Alkuperäiset harjoitukset löytyvät osoitteesta (https://github.com/PT-Jaloit/
 GitHubiin rekisteröityminen (Sign up): (https://github.com/join)
 Gitin asennus linuxiin: (https://git-scm.com/download/linux)
 Asennuksen jälkeen on hyvä konfiguroida gitiin omat henkilötiedot eli nimi ja sähköpostiosoite:
-``` $ git config --global user.name "Oma Nimi" ´´´
-``` $ git config --global user.email oma@nimi.com ´´´
+` $ git config --global user.name "Oma Nimi" `
+` $ git config --global user.email oma@nimi.com `
 
 Lisätietoa ja ohjeita muihin konfiguraatioihin löytyy täältä (https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 
