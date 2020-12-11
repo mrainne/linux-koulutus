@@ -18,6 +18,7 @@ Lisätietoa ja ohjeita muihin konfiguraatioihin löytyy täältä (https://git-s
 ![Capture](/Excercise%201/Screencapture/uusi_repo.png?raw=true)
 2. GitHub: Luodaan tyhjä repo ja lisätään siihen README -tiedosto.
 ![Capture](/Excercise%201/Screencapture/create_new_page.png?raw=true)
+
 Kohtaan Repository name kirjoitetaan luotavan repon nimi. Valitaan julkisuus (Public) ja lisätään README tiedosto (Add a README file). Kun halutut valinnat on tehty luodaan repo painalla alalaidassa olevaa vihreää nappia (Create repository).
 3. GitHub: Repon URLin kopiointi
 Osoite, jolla repoon viitataan löytyy repon sivulta. Osoitetta tarvitaan esimerkiksi repon kloonaamiseen omalle koneelle. Kopiointi onnistuu kuvan osoittamasta paikasta.
@@ -32,7 +33,7 @@ Osoite, jolla repoon viitataan löytyy repon sivulta. Osoitetta tarvitaan esimer
 
 ` git clone <kohdassa_3_kopioitu_repositoryn_osoite> `
 
-Kloonaus luo uuden hakemiston, jolla on sama nimi kuin GitHubin repolla. Tässä harjoituksessa luotu tiedosto on siis DevOps-Exc1. Siirrytään hakemistoon `cd`-komennolla.
+Kloonaus luo uuden hakemiston, jolla on sama nimi kuin GitHubin repolla. Tässä harjoituksessa luotu hakemisto on siis DevOps-Exc1. Siirrytään hakemistoon `cd`-komennolla.
 
 ### README.md tiedoston editointi
 1. Tietokone: Avataan tiedosto README.md tekstieditorilla
@@ -72,13 +73,17 @@ Klikataan kuvan mukaista nappia ja kirjoitetaan tekstikenttään uuden haaran ni
 6. Tietokone: Työnnetään muutokset Githubiin `git push`
 7. GitHub: Ellei tekemäsi muutos näy GitHubissa sivun uudelleen lataamisen jälkeen klikkaa samaa nappulaa kuin 1. kohdassa ja valitse sieltä haara (branch), johon teit muutoksia. 
 
-### Merge Branches
-1. GitHub: Chose Pull request tab
-2. GitHub: New pull request
-3. GitHub: Base-> master
-4. GitHub: Compare-> development
-5. GitHub: Check changes and chose -> Create new pull request
-6. GitHub: Merge changes
+### Haarojen liittäminen yhdeksi
+1. GitHub: Uuden pull requestin luominen voidaan aloittaa painamalla sivun yläreunassa olevasta palkista löytyvää Compare and pull request nappia
+![Capture](/Excercise%201/Screencapture/pull_request1.png?raw=true)
+2. GitHub: tarkasta että yläreunan nappuloissa Base-> mihin haaraan liitosta tehdään (tässä main, mutta voidaan valita myös muita haaroja)  
+3. GitHub: Compare-> mitä haaraa ollaan liittämässä
+4. GitHub: Isompaan tekstikenttään voi kirjoitella lisätietoa muutoksista. Sivun alalaidassa (ei kuvassa) näkyy mitä muutoksia ollaan liittämässä. Kun ollaan tyytyväisiä pull requestiin voidaan painaa tekstikentän alapuolella olevaa nappia  (Create new pull request). Napin oikeassa laidassa olevasta pienestä valkoisesta kolmiosta avautuu valikko, mistä voi valita ettei pull requestista luodaan ainoastaan luonnos (draft) jota voidaan vielä täydentää ennen varsinaisen pull requestin tekemistä.
+![Capture](/Excercise%201/Screencapture/pull_request2.png?raw=true)
+5. GitHub: Vahvista muutosten liittäminen. Muutokset eivät aiheuta konflikteja alkuperäisen haaran kanssa, joten haarat voidaan liittää yhteen painamalla vihreää nappia (Merge pull request).
+![Capture](/Excercise%201/Screencapture/merge_pr.png?raw=true)
+GitHub haluaa kuitenkin vielä varmistaa, että ollaan varmoja siitä että haarat liitetään yhteen. Liitos tehdään lopullisesti painamalla Confirm merge -napista. Se sulkee pull requestin ja liitetyn haaran voi halutessaan poistaa Delete branch -napista.
+![Capture](/Excercise%201/Screencapture/confirm_merge.png?raw=true)
 
 ### Copy example project code to github
 1. GitHub: (https://github.com/shapeshed/express_example)
