@@ -5,7 +5,9 @@ Alkuperäiset harjoitukset löytyvät osoitteesta (https://github.com/PT-Jaloit/
 GitHubiin rekisteröityminen (Sign up): (https://github.com/join)
 Gitin asennus linuxiin: (https://git-scm.com/download/linux)
 Asennuksen jälkeen on hyvä konfiguroida gitiin omat henkilötiedot eli nimi ja sähköpostiosoite:
+
 ` $ git config --global user.name "Oma Nimi" `
+
 ` $ git config --global user.email oma@nimi.com `
 
 Lisätietoa ja ohjeita muihin konfiguraatioihin löytyy täältä (https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
@@ -14,23 +16,27 @@ Lisätietoa ja ohjeita muihin konfiguraatioihin löytyy täältä (https://git-s
 ### Luodaan uusi repo GitHubiin
 1. GitHub: Uuden repon luominen voidaan aloittaa esimerkiksi seuraavalla tavalla: sivun ylälaidassa olevaa GitHub -logoa klikkaamalla päästään sivulle, jonka vasemmassa laidassa on palsta jonka yläreunassa on teksti Repositories ja vihreä nappi (New). Uuden repon luominen aloitetaan klikkaamalla kyseistä nappia.
 ![Capture](/Excercise%201/Screencapture/uusi_repo.png?raw=true)
-2. Luodaan tyhjä repo ja lisätään siihen README -tiedosto.
+2. GitHub: Luodaan tyhjä repo ja lisätään siihen README -tiedosto.
 ![Capture](/Excercise%201/Screencapture/create_new_page.png?raw=true)
 Kohtaan Repository name kirjoitetaan luotavan repon nimi. Valitaan julkisuus (Public) ja lisätään README tiedosto (Add a README file). Kun halutut valinnat on tehty luodaan repo painalla alalaidassa olevaa vihreää nappia (Create repository).
+3. GitHub: Repon URLin kopiointi
+Osoite, jolla repoon viitataan löytyy repon sivulta. Osoitetta tarvitaan esimerkiksi repon kloonaamiseen omalle koneelle. Kopiointi onnistuu kuvan osoittamasta paikasta.
+![Capture](/Excercise%201/Screencapture/osoitteen_kopiointi.png?raw=true)
+4. Tietokone: Luodaan projektille ns. työhakemisto (working directory) ja siirrytään sinne. Tämä ei ole välttämätöntä, mutta voi olla että jotkin kehitystyökalut vaativat tätä. 
 
-1. GitHub: Create new empty github repository (__Create also README file__)
-![Capture](/Excercise%201/Screencapture/CreateRepo.png?raw=true)
-2. GitHub: Clone or Download repository -> Get URL
-![Capture](/Excercise%201/Screencapture/CloneRepoURL.png?raw=true)
-3. Computer: Create working directory for project
-4. Visual Studio Code: File -> Open Folder
-![Capture](/Excercise%201/Screencapture/VSCode_OpenFolder.png?raw=true)
-5. Visual Studio Code: Terminal -> New Terminal -> git clone (__Copy Github repository URL Here__)
-![Capture](/Excercise%201/Screencapture/VSCode_GitClone.png?raw=true)
+` mkdir <projektin_nimi> `
 
-### Edit Readme.md
-1. Visual Studio Code: Open README.md
-2. Visual Studio Code: Edit README.md
+` cd <projektin_nimi> `
+
+5. Tietokone: Klooanataan GitHub repo omalle koneelle:
+
+` git clone <kohdassa_3_kopioitu_repositoryn_osoite>
+
+Kloonaus luo uuden hakemiston, jolla on sama nimi kuin GitHubin repolla. Tässä harjoituksessa luotu tiedosto on siis DevOps-Exc1. Siirrytään hakemistoon `cd`-komennolla.
+
+### README.md tiedoston editointi
+1. Tietokone: Avataan tiedosto README.md tekstieditorilla
+2. Tietokone: Tehdään tiedostoon seuraavat muutokset, tallennetaan ja suljetaan tiedosto.
 ```
 * Bullet point
 1. Luettelo
@@ -49,8 +55,8 @@ __Bold__
 ### 3-Tason otsikko
 (www.google.fi) URL-osoite
 ```
-3. Visual Studio Code: Add Changes
-4. Visual Studio Code: Commit changes
+3. Tietokone: lisätään muutokset `git add README.md`
+4. Tietokone: tehdään commit `git commit -m "<commit viesti>"`
 5. Visual Studio Code: Push changes to Github
 6. GitHub: Check changes
 
