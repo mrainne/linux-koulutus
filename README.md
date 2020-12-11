@@ -2,6 +2,9 @@
 Alkuperäiset harjoitukset löytyvät osoitteesta (https://github.com/PT-Jaloit/DevOps-Lab). Alkuperäiset ohjeet toimivat Windows ympäristössä ja niissä käytetään VSCodea. Tämä ohje on kirjoitettu linux ympäristöön ja komentorivin käyttäjälle. 
 Ohjeessa käydään yksityiskohtaisesti läpi muutama helppo tehtävä askel askeleelta ja se on kirjoitettu osana oppimisprosessia. Ajatuksena on käydä tehtävät läpialusta loppuun ja pyrkiä välttämään ongelmatilanteita.
 
+Merkinnät:
+Github – osatehtävä suoritetaan GitHubissa
+Tietokone – osatehtävä suoritetaan komentorivillä
 
 ## Esivalmistelu
 GitHubiin rekisteröityminen (Sign up): (https://github.com/join)
@@ -17,7 +20,9 @@ Lisätietoa ja ohjeita muihin konfiguraatioihin löytyy täältä (https://git-s
 ## Versionhallintajärjestelmä harjoitukset
 ### Luodaan uusi repo GitHubiin
 1. GitHub: Uuden repon luominen voidaan aloittaa esimerkiksi seuraavalla tavalla: sivun ylälaidassa olevaa GitHub -logoa klikkaamalla päästään sivulle, jonka vasemmassa laidassa on palsta jonka yläreunassa on teksti Repositories ja vihreä nappi (New). Uuden repon luominen aloitetaan klikkaamalla kyseistä nappia.
+
 ![Capture](/Excercise%201/Screencapture/uusi_repo.png?raw=true)
+
 2. GitHub: Luodaan tyhjä repo ja lisätään siihen README -tiedosto.
 ![Capture](/Excercise%201/Screencapture/create_new_page.png?raw=true)
 
@@ -34,7 +39,8 @@ Osoite, jolla repoon viitataan löytyy repon sivulta. Osoitetta tarvitaan esimer
 ` cd <projektin_nimi> `
 
 Tästä lähtien kaikki komennot suoritetaan tässä hakemistossa ellei toisin mainita.
-5. Tietokone: Klooanataan GitHub repo omalle koneelle:
+
+5. Tietokone: Kloonataan GitHub repo omalle koneelle:
 
 ` git clone <kohdassa_3_kopioitu_repositoryn_osoite> `
 
@@ -116,3 +122,9 @@ Komennolla `ls` voidaan varmistaa, että hakemistoon on ilmestynyt hakemisto nim
 7. Tietokone: Työnnä muutokset GitHubiin `git push`
 8. GitHub: express_example-master kansio pitäisi nyt näkyä siinä kehityshaarassa, johon se on lisätty. 
 
+
+Kun näistä on selvinnyt, voi testailla, mitä tapahtuu, jos GitHub-repoa luodessa tekeekin yksityisen (Private) repon. Tai mitä tapahtuu jos `git checkout` komennossa kirjoittaa haaran väärin. Komennolla `git status` voi seurata tiedostojen tilan muutoksia komentojen välillä. 
+
+Commit-viestien merkitykseen ja siihen millainen on hyvä viesti voi tutustua täällä: (https://medium.com/better-programming/how-to-write-good-commit-messages-and-why-is-it-important-18ac406ce33a)
+
+Pull requestien merkitystä avataan tarkemmin täällä: (https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests)
