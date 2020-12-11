@@ -111,7 +111,7 @@ Komennolla `ls` voidaan varmistaa, että hakemistoon on ilmestynyt hakemisto nim
 
 4. Tietokone: Varmistetaan, että työskennellään oikeassa projektin haarassa antamalla komento `git checkout <edellisissä_tehtävissä_käytetty_haara>`. Jos haara on tuhottu edellisessä tehtävässä se kannattaa käydä luomassa uudestaan (ks. Uuden haaran luominen kohdat 1-3).
 5. Tietokone: Lisää muutokset `git add -A`
-6. Tietokone: Tee commit `git commit -m "commit_viesti"
+6. Tietokone: Tee commit `git commit -m "commit_viesti"`
 7. Tietokone: Työnnä muutokset GitHubiin `git push`
 8. GitHub: express_example-master kansio pitäisi nyt näkyä siinä kehityshaarassa, johon se on lisätty. 
 
