@@ -33,6 +33,7 @@ Osoite, jolla repoon viitataan löytyy repon sivulta. Osoitetta tarvitaan esimer
 
 ` cd <projektin_nimi> `
 
+Tästä lähtien kaikki komennot suoritetaan tässä hakemistossa ellei toisin mainita.
 5. Tietokone: Klooanataan GitHub repo omalle koneelle:
 
 ` git clone <kohdassa_3_kopioitu_repositoryn_osoite> `
