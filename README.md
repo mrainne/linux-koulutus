@@ -17,6 +17,8 @@ Asennuksen jälkeen on hyvä konfiguroida gitiin omat henkilötiedot eli nimi ja
 
 Lisätietoa ja ohjeita muihin konfiguraatioihin löytyy täältä (https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 
+Lisäksi tarvitaan ohjelma, jolla voidaan purkaa ZIP-paketti esim. unzip. 
+
 ## Versionhallintajärjestelmä harjoitukset
 ### Luodaan uusi repo GitHubiin
 1. GitHub: Uuden repon luominen voidaan aloittaa esimerkiksi seuraavalla tavalla: sivun ylälaidassa olevaa GitHub -logoa klikkaamalla päästään sivulle, jonka vasemmassa laidassa on palsta jonka yläreunassa on teksti Repositories ja vihreä nappi (New). Uuden repon luominen aloitetaan klikkaamalla kyseistä nappia.
