@@ -23,16 +23,16 @@ Lisäksi tarvitaan ohjelma, jolla voidaan purkaa ZIP-paketti esim. unzip.
 ### Luodaan uusi repo GitHubiin
 1. GitHub: Uuden repon luominen voidaan aloittaa esimerkiksi seuraavalla tavalla: sivun ylälaidassa olevaa GitHub -logoa klikkaamalla päästään sivulle, jonka vasemmassa laidassa on palsta jonka yläreunassa on teksti Repositories ja vihreä nappi (New). Uuden repon luominen aloitetaan klikkaamalla kyseistä nappia.
 
-![Capture](/Excercise%201/Screencapture/uusi_repo.png?raw=true)
+![Capture](Screencapture/uusi_repo.png?raw=true)
 
 2. GitHub: Luodaan tyhjä repo ja lisätään siihen README -tiedosto.
-![Capture](/Excercise%201/Screencapture/create_new_page.png?raw=true)
+![Capture](Screencapture/create_new_page.png?raw=true)
 
 Kohtaan Repository name kirjoitetaan luotavan repon nimi. Valitaan julkisuus (Public) ja lisätään README tiedosto (Add a README file). Kun halutut valinnat on tehty luodaan repo painalla alalaidassa olevaa vihreää nappia (Create repository).
 3. GitHub: Repon URLin kopiointi
 Osoite, jolla repoon viitataan löytyy repon sivulta. Osoitetta tarvitaan esimerkiksi repon kloonaamiseen omalle koneelle. Kopiointi onnistuu kuvan osoittamasta paikasta.
 
-![Capture](/Excercise%201/Screencapture/osoitteen_kopiointi.png?raw=true)
+![Capture](Screencapture/osoitteen_kopiointi.png?raw=true)
 
 4. Tietokone: Luodaan projektille ns. työhakemisto (working directory) ja siirrytään sinne. Tämä ei ole välttämätöntä, mutta voi olla että jotkin kehitystyökalut vaativat tätä. 
 
@@ -78,7 +78,7 @@ __Bold__
 1. GitHub: Luodaan uusi haara: Development
 Klikataan kuvan mukaista nappia ja kirjoitetaan tekstikenttään uuden haaran nimi (esim. Development) ja painetaan enteriä. Kannattaa painaa mieleen uuden haaran tarkka kirjoitusasu, sillä on merkitystä myöhemmässä vaiheessa.
 
-![Capture](/Excercise%201/Screencapture/uuden_haaran_luonti.png?raw=true)
+![Capture](Screencapture/uuden_haaran_luonti.png?raw=true)
 
 2. Tietokone: haetaan GitHubiin tehdyt muutokset paikalliseen repoon komennolla`git pull` (huomataan, että git kertoo uuden haaran olemassaolosta).
 3. Tietokone: Vaihdetaan uuteen haaraan komennolla `git checkout <haaran_nimi>`, haaran nimi on tässä vaiheessa oltava sama kuin kohdassa 1. Ellei se ole, tulee kohdassa 6. virheilmoituksia ongelmista, kun paikallisessa versiossa on haara, jota ei löydy GitHubista.  
@@ -90,27 +90,27 @@ Klikataan kuvan mukaista nappia ja kirjoitetaan tekstikenttään uuden haaran ni
 ### Haarojen liittäminen yhdeksi
 1. GitHub: Uuden pull requestin luominen voidaan aloittaa painamalla sivun yläreunassa olevasta palkista löytyvää Compare and pull request nappia
 
-![Capture](/Excercise%201/Screencapture/pull_request1.png?raw=true)
+![Capture](Screencapture/pull_request1.png?raw=true)
 
 2. GitHub: tarkasta että yläreunan nappuloissa Base-> mihin haaraan liitosta tehdään (tässä main, mutta voidaan valita myös muita haaroja)  
 3. GitHub: Compare-> mitä haaraa ollaan liittämässä
 4. GitHub: Isompaan tekstikenttään voi kirjoitella lisätietoa muutoksista. Sivun alalaidassa (ei kuvassa) näkyy mitä muutoksia ollaan liittämässä. Kun ollaan tyytyväisiä pull requestiin voidaan painaa tekstikentän alapuolella olevaa nappia  (Create new pull request). Napin oikeassa laidassa olevasta pienestä valkoisesta kolmiosta avautuu valikko, mistä voi valita ettei pull requestista luodaan ainoastaan luonnos (draft) jota voidaan vielä täydentää ennen varsinaisen pull requestin tekemistä.
 
-![Capture](/Excercise%201/Screencapture/pull_request2.png?raw=true)
+![Capture](Screencapture/pull_request2.png?raw=true)
 
 5. GitHub: Vahvista muutosten liittäminen. Muutokset eivät aiheuta konflikteja alkuperäisen haaran kanssa, joten haarat voidaan liittää yhteen painamalla vihreää nappia (Merge pull request).
 
-![Capture](/Excercise%201/Screencapture/merge_pr.png?raw=true)
+![Capture](Screencapture/merge_pr.png?raw=true)
 
 GitHub haluaa kuitenkin vielä varmistaa, että ollaan varmoja siitä että haarat liitetään yhteen. Liitos tehdään lopullisesti painamalla Confirm merge -napista. Se sulkee pull requestin ja liitetyn haaran voi halutessaan poistaa Delete branch -napista. (Tätä ei kannata tehdä vielä, koska samaa haaraa käytetään vielä seuraavassa tehtävässä.)
 
-![Capture](/Excercise%201/Screencapture/confirm_merge.png?raw=true)
+![Capture](Screencapture/confirm_merge.png?raw=true)
 
 ### Esimerkkiprojektin koodin kopiointi
 1. GitHub: Mene osoitteeseen (https://github.com/shapeshed/express_example)
 2. GitHub: Valitse Code -nappulan valikosta Download ZIP.
 
-![Capture](/Excercise%201/Screencapture/download_zip.png?raw=true)
+![Capture](Screencapture/download_zip.png?raw=true)
 
 3. Tietokone: Zip-paketin voi kopioida projektihakemistoon ja purkaa sitten tai sen voi purkaa suoraan projektihakemistoon. Paketin purkaminen onnistuu esimerkiksi näin:
 
