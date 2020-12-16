@@ -124,6 +124,11 @@ Komennolla `ls` voidaan varmistaa, että hakemistoon on ilmestynyt hakemisto nim
 7. Tietokone: Työnnä muutokset GitHubiin `git push`
 8. GitHub: express_example-master kansio pitäisi nyt näkyä siinä kehityshaarassa, johon se on lisätty. 
 
+(Kopiointi onnistuu helpommin forkilla:
+1. GitHub: Mennään osoitteeseen (https://github.com/shapeshed/express_example)
+2. Github: Oikealla ylhäällä on nappi Fork, painamalla siitä GitHub luo käyttäjälle kopion reposta, eikä tarvitse itse huolehtia tiedostojen siirtelystä oman koneen ja GitHubin välillä ja hakemistorakenteet yms. säilyvät. Kopio löytyy osoitteella github.com/<oma_käyttäjänimi>/<kopioidun_repon_nimi>) 
+  
+![Capture](Screencapture/fork_repo.png?raw=true)
 
 Kun näistä on selvinnyt, voi testailla, mitä tapahtuu, jos GitHub-repoa luodessa tekeekin yksityisen (Private) repon. Tai mitä tapahtuu jos `git checkout` komennossa kirjoittaa haaran väärin. Komennolla `git status` voi seurata tiedostojen tilan muutoksia komentojen välillä. 
 
