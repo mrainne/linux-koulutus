@@ -47,8 +47,8 @@ mkfs.xfs /dev/sdb1
 
 Luodaan hakemisto, johon partitio mountataan ja tehdään mountti:
 ```
-mkdir backups
-mount /dev/sdb1 backups
+mkdir /backups
+mount /dev/sdb1 /backups
 ```
 
 Lisätään vielä levyn mounttaus koneen käynnistyksessä tiedostoon `/etc/fstab`. Ensin täytyy selvittää partition `UUID`: `blkid /dev/sdb1`. Lisätään em. tiedostoon rivi:
@@ -60,4 +60,4 @@ UUID=4c23b535-a346-4db3-841e-c680ab2c1bdd /backups xfs defaults 0 0
 
 Palvelimelle on jo valmiiksi asennettu `rsync` ja se riittää.
 
-
+Kun ensimmäiset varmistukset on tehty, tarkistetaan, että varmistukset ovat tallentuneet oikeaan hakemistoon aiotulla tavalla.

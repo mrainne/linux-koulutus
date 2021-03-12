@@ -12,17 +12,17 @@ Muut toimenpiteet:
 * luodaan käyttäjät (2 kpl) ja osastojen käyttäjäryhmät
 * luodaan osastokohtaiset hakemistot ja määritellään niiden käyttöoikeudet
 * asenneteaan ja konfiguroidaan `nfs`
-* asennetaan backup-ohjelma (`rdiff-backup`) ja konfiguroidaan päivittäiset varmistukset (jälkimmäinen tehdään kun Server02 on asennettu ja valmisteltu)
+* asennetaan backup-ohjelma (`rsync`) ja konfiguroidaan päivittäiset varmistukset (jälkimmäinen tehdään kun Server02 on asennettu ja valmisteltu)
 * ssh-konfigurointi käyttämään pelkkiä avaimia (wks1 asennuksen ja avainten generoinnin ja testaamisen jälkeen), estetään kirjautuminen pelkällä salasanalla
 * varmistetaan tietojen palautus backupeista
 
 ## Server02
 Asennus:
 * asennuksessa asetetaan kiinteä ip: 172.19.20.11
-* lisätään toinen 25GB levy varmistuksia varten
+* lisätään asennuksen jälkeen toinen levy (30GB), partitioidaan ja mountataan levy käsin ja määritellään mounttaus koneen käynnistyksen yhteydessä.
 
 Muut toimenpiteet:
-* luodaan backup-hakemisto, johon Server01 varmuuskopiot tallennetaan
+* Server01 varmistukset tallennetaan edellä luodulle partitiolle, joka on mountattu hakemistoon `/backups` 
 * muut tarvittavat konfiguraatiot varmistuksiin ja varmistusten palauttamiseen.
 
 ## wks1
@@ -30,7 +30,7 @@ Asennus:
 * verkkoasetuksissa DHCP
 
 Muut toimenpiteet:
-* luodaan käyttäjät (voidaan tehdä myös asennusvaiheessa)
+* luodaan käyttäjät (luodaan asennusvaiheessa yksi ei-root käyttäjä ja toinen käyttäjä asennuksen)
 * luodaan osastojen käyttäjäryhmät ja liitetään käyttäjät oikeisiin ryhmiin
 * generoidaan käyttäjille ssh-avaimet ja kopioidaan ne palvelimelle
 * asennetaan `nfs`

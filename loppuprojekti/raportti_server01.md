@@ -276,6 +276,8 @@ firewall-cmd --runtime-to-permanent
 ```
 
 Tämän jälkeen on vielä valmisteltava jako työasemalla.
+
+`nfs` ei tarjoa jaetuille kansioille muuta kuin järjestelmän käyttöoikeuksien antaman suojan. Jos halutaan parempaa tietosuojaa, on tarpeen asentaa myös Kerberos. 
   
 ### Jaettujen kansioiden varmuuskopiointi
 
@@ -291,7 +293,7 @@ Testataan avaimen toimivuus: `ssh root@Server02`
 
 Varmuuskopiointi tapahtuu komennolla:
 ```
-rysnc -a /shared Server02:/backups
+rysnc -a /shared/ Server02:/backups
 ```
 
 Ajastetaan varmuuskopiointi tehtäväksi päivittäin klo 23.
@@ -301,7 +303,7 @@ Tehdään hakemisto ajastettaville skripteille:`mkdir scripts`. Lisätään sinn
 #!/bin/bash
 
 # Backup files from directory /shared to Server02 directory /backups
-rsync -a /shared Server02:/backups
+rsync -a /shared/ Server02:/backups
 ```
 
 Lisätään tiedostolle suoritusoikeudet: `chmod u+x backup_shared`.
@@ -313,7 +315,7 @@ Ajastetaan varmistus: `crontab -e`
 
 `rsync` luo ns. lisäysvarmistuksen eli jokaisella varmistuksella lisätään muutokset vanhojen tiedostojen päälle. Varmuuskopioista ei ole mahdollista palauttaa tiettyä versiota tiedostosta vain viimeisimmän version palauttaminen on mahdollista. Palautus voidaan tehdä kääntämällä `rsync`in argumentit toisin päin esim.
 ```
-rsync -a Server02:/backups/shared/Hallinto /shared/Hallinto
+rsync -a Server02:/backups/shared/Hallinto/ /shared/Hallinto
 ```
 
 Parempi on kuitenkin tehdä palautusta varten väliaikainen tiedosto ja kopioida halutut tiedostot siihen kansioon, johon ne halutaan palauttaa esimerkiksi
@@ -325,7 +327,7 @@ cp /tmp/restore_myynti/tiedosto /shared/Myynti/tiedosto
 `rsync` ei automaattisesti poista varmuuskopiosta poistettuja tiedostoja, mikä pikkuhiljaa kasvattaa `/backups` -hakemiston kokoa. Tiedostoja voi siivota varmistuksista `--delete` optiolla. Koska käyttäjät ovat laiskoja siivoamaan turhia tiedostoja pois, tämä tuskin auttaa pidemmän päälle ja onkin syytä harkita jonkinlaista kierrätystä varmistuksille.
 
 ### Estetään salasanan käyttö ssh-yhteyksissä
-
+	
 Tiedostossa `/etc/ssh/sshd_config` asetus
 ```
 PasswordAuthentication yes
@@ -334,4 +336,6 @@ vaihdetaan muotoon
 ```
 PasswordAuthentication no
 ```
-Tämän jälkeen Server01 ei salli kirjautumista salasanalla. Sama asetus voidaan tehdä myös Server02:ssa. 
+Tämän jälkeen Server01 ei salli kirjautumista salasanalla. Sama asetus voidaan tehdä myös Server02:ssa.
+
+Jotta muutos tulee voimaan, on vielä käynnistettävä uudelleen `sshd`: `systemctl restart sshd` 
